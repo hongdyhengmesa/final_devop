@@ -1,0 +1,3 @@
+Database: B-hong_dyhengmesa-db
+SHOW TABLES;
+Empty set (0.01 sec)
