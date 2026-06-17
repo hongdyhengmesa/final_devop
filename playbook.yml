@@ -4,11 +4,6 @@
 
   tasks:
 
-    - name: Git Pull
-      shell: |
-        cd {{ playbook_dir }}
-        git pull
-
     - name: Build Maven
       shell: |
         cd {{ playbook_dir }}
@@ -18,3 +13,7 @@
       shell: |
         cd {{ playbook_dir }}
         ./mvnw test
+
+    - name: Deployment Success
+      debug:
+        msg: "Application deployed successfully"
