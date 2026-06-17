@@ -1,0 +1,21 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org">
+<head>
+    <title>ID Card</title>
+</head>
+<body>
+
+<div style="border:1px solid black;padding:20px;width:400px">
+
+    <h2>ID CARD</h2>
+
+    <p>Name: <span th:text="${profile.fullName}"></span></p>
+
+    <p>Type: <span th:text="${profile.type}"></span></p>
+
+    <p>Department: <span th:text="${profile.department}"></span></p>
+
+</div>
+
+</body>
+</html>
