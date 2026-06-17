@@ -1,0 +1,20 @@
+---
+- hosts: web
+  become: false
+
+  tasks:
+
+    - name: Git Pull
+      shell: |
+        cd {{ playbook_dir }}
+        git pull
+
+    - name: Build Maven
+      shell: |
+        cd {{ playbook_dir }}
+        ./mvnw clean package -DskipTests
+
+    - name: Run Tests
+      shell: |
+        cd {{ playbook_dir }}
+        ./mvnw test
