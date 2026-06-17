@@ -28,9 +28,9 @@ pipeline {
 
         stage('Deploy') {
             steps {
-                sh 'ansible-playbook -i inventory.ini playbook.yml'
+                sh '/opt/homebrew/bin/ansible-playbook -i inventory.ini playbook.yml'
             }
-        }
+       }
     }
 
     post {
