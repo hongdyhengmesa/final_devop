@@ -5,9 +5,13 @@ metadata:
 spec:
   containers:
     - name: web
-      image: php:8.2-apache
+      image: eclipse-temurin:21-jdk
+      command: ["sleep"]
+      args: ["infinity"]
       ports:
-        - containerPort: 80
+        - containerPort: 8080
+        - containerPort: 8443
+        - containerPort: 2222
 
 ---
 apiVersion: v1
@@ -22,6 +26,6 @@ spec:
         - name: MYSQL_ROOT_PASSWORD
           value: Hello@123
         - name: MYSQL_DATABASE
-          value: mesa-db
+          value: B-hong_dyhengmesa-db
       ports:
         - containerPort: 3306
